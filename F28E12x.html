@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F28E12x 实时微控制器 | 数字刊物版</title>
+    
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Noto Serif SC (Chinese) & Poppins (English) via CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* 注入设计基因：字体系统 */
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #f8fafc; /* 使用一个非常浅的灰色作为底色，模拟纸张质感 */
+            color: #111827;
+        }
+
+        .font-english {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* 注入设计基因：巨大的描边空心视觉锚点 */
+        .visual-anchor {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            line-height: 0.8;
+            color: transparent;
+            -webkit-text-stroke: 2px #d1d5db; /* 描边效果 */
+            text-stroke: 2px #d1d5db;
+            text-align: center;
+        }
+
+        /* 响应式调整视觉锚点大小 */
+        @media (min-width: 1024px) {
+            .visual-anchor {
+                font-size: 28rem; /* 在大屏幕上极其巨大 */
+            }
+        }
+        @media (max-width: 1023px) {
+            .visual-anchor {
+                font-size: 10rem; /* 在小屏幕上缩小 */
+            }
+        }
+    </style>
+    
+    <script>
+        // TailwindCSS 自定义配置
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'noto-serif-sc': ['"Noto Serif SC"', 'serif'],
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-dark': '#1f2937', // 页脚深色背景
+                        'brand-highlight': '#4f46e5', // 主题高光色 (Indigo)
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="antialiased">
+
+    <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+
+        <!-- ====================================================== -->
+        <!-- I. 页头 (Header) - 专业的“刊头” -->
+        <!-- ====================================================== -->
+        <header class="py-12 md:py-16 border-b-2 border-gray-900 mb-8">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between">
+                <div>
+                    <h1 class="text-5xl md:text-7xl font-black tracking-wider leading-none">F28E12x</h1>
+                    <p class="mt-2 text-xl md:text-2xl font-semibold max-w-3xl leading-tight">
+                        C2000™ 实时微控制器系列的可扩展、超低延迟设备，专为提高电机驱动应用的效率而设计。
+                    </p>
+                </div>
+                <div class="mt-6 md:mt-0 md:text-right flex-shrink-0">
+                    <p class="font-english text-xs font-semibold uppercase tracking-widest text-gray-500">ADVANCE INFORMATION</p>
+                    <p class="font-english text-sm font-bold text-gray-800">F28E120SC</p>
+                    <p class="font-english text-xs font-medium text-gray-600">SPRSPB9 – JULY 2025</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- ====================================================== -->
+        <!-- II. 主内容区 (Main Body) - 4+8 非对称网格布局 -->
+        <!-- ====================================================== -->
+        <main class="grid grid-cols-1 lg:grid-cols-12 lg:gap-x-8 py-8">
+
+            <!-- 视觉锚点区 (4列侧边栏) -->
+            <aside class="lg:col-span-4 flex items-center justify-center relative overflow-hidden h-64 lg:h-auto">
+                <div class="visual-anchor">F</div>
+            </aside>
+
+            <!-- 核心信息区 (8列) -->
+            <section class="lg:col-span-8 mt-8 lg:mt-0">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    
+                    <!-- 特性卡片 -->
+                    <div class="bg-white p-5 border border-gray-200 bg-gradient-to-tr from-brand-highlight/5 to-transparent">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center gap-3"><i class="fa-solid fa-microchip text-brand-highlight"></i>实时处理</h3>
+                        <ul class="space-y-2 text-lg font-semibold leading-relaxed">
+                            <li><span class="font-english font-bold">160MHz</span> C28x 32位 DSP CPU</li>
+                            <li>等效 <span class="font-english font-bold">320MHz Arm® Cortex®-M7</span> 性能</li>
+                            <li>集成浮点单元 (FPU)</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-5 border border-gray-200">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center gap-3"><i class="fa-solid fa-memory text-brand-highlight"></i>片上内存与安全</h3>
+                        <ul class="space-y-2 text-lg font-semibold leading-relaxed">
+                            <li>高达 <span class="font-english font-bold">128KB</span> Flash (ECC保护)</li>
+                            <li><span class="font-english font-bold">16KB</span> RAM (奇偶校验保护)</li>
+                            <li class="font-english text-sm font-medium pt-2 text-gray-600">JTAGLOCK / Zero-pin boot / Dual-zone security</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-5 border border-gray-200">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center gap-3"><i class="fa-solid fa-wave-square text-brand-highlight"></i>模拟系统</h3>
+                        <ul class="space-y-2 text-lg font-semibold leading-relaxed">
+                            <li>一个 <span class="font-english font-bold">9.4MSPS</span>, 12位 ADC (17通道)</li>
+                            <li>三个窗口比较器 (CMPSS_LITE)</li>
+                            <li>一个可编程增益放大器 (PGA)</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-5 border border-gray-200">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center gap-3"><i class="fa-solid fa-gears text-brand-highlight"></i>增强型控制外设</h3>
+                        <ul class="space-y-2 text-lg font-semibold leading-relaxed">
+                            <li><span class="font-english font-bold">8</span> 个总 PWM 通道 (2个 MCPWM)</li>
+                            <li>一个增强型捕获 (eCAP) 模块</li>
+                            <li>一个增强型正交编码器 (eQEP) 模块</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-5 border border-gray-200">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center gap-3"><i class="fa-solid fa-satellite-dish text-brand-highlight"></i>通信外设</h3>
+                        <ul class="space-y-2 text-lg font-semibold leading-relaxed">
+                            <li><span class="font-english">1x I2C</span>, <span class="font-english">1x SPI</span>, <span class="font-english">1x UART</span>, <span class="font-english">2x SCI</span></li>
+                             <li>高速 UART 支持 <span class="font-english font-bold">20Mbps</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-5 border border-gray-200 bg-gradient-to-bl from-brand-highlight/5 to-transparent">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center gap-3"><i class="fa-solid fa-box-archive text-brand-highlight"></i>封装与温度</h3>
+                        <ul class="space-y-2 text-lg font-semibold leading-relaxed">
+                            <li><span class="font-english">48-pin LQFP</span>, <span class="font-english">32-pin LQFP/VQFN</span></li>
+                            <li>工作结温 (Tj): <span class="font-english font-bold">–40°C</span> 至 <span class="font-english font-bold">125°C</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ====================================================== -->
+        <!-- III. 中段分隔区 (Mid-Breaker) - 全宽，风格不同 -->
+        <!-- ====================================================== -->
+        <section class="w-full bg-gray-200 my-12 py-12">
+            <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+                 <h2 class="text-center text-4xl font-black mb-8">广泛的应用领域</h2>
+                 <div class="columns-2 md:columns-3 lg:columns-4 gap-x-8 text-lg font-semibold leading-relaxed">
+                    <p class="mb-2"><i class="fa-solid fa-fan fa-fw mr-2 text-gray-600"></i>家电</p>
+                    <p class="mb-2"><i class="fa-solid fa-industry fa-fw mr-2 text-gray-600"></i>工厂自动化</p>
+                    <p class="mb-2"><i class="fa-solid fa-car-battery fa-fw mr-2 text-gray-600"></i>电机驱动</p>
+                    <p class="mb-2"><i class="fa-solid fa-robot fa-fw mr-2 text-gray-600"></i>移动机器人</p>
+                    <p class="mb-2"><i class="fa-solid fa-solar-panel fa-fw mr-2 text-gray-600"></i>电网基础设施</p>
+                    <p class="mb-2"><i class="fa-solid fa-plug-circle-bolt fa-fw mr-2 text-gray-600"></i>工业电源</p>
+                    <p class="mb-2"><i class="fa-solid fa-building-shield fa-fw mr-2 text-gray-600"></i>楼宇自动化</p>
+                    <p class="mb-2"><i class="fa-solid fa-screwdriver-wrench fa-fw mr-2 text-gray-600"></i>电动工具</p>
+                    <p class="mb-2"><i class="fa-solid fa-wind fa-fw mr-2 text-gray-600"></i>空调室外机</p>
+                    <p class="mb-2"><i class="fa-solid fa-server fa-fw mr-2 text-gray-600"></i>商用电信整流器</p>
+                    <p class="mb-2"><i class="fa-solid fa-charging-station fa-fw mr-2 text-gray-600"></i>便携式电站</p>
+                    <p class="mb-2"><i class="fa-solid fa-power-off fa-fw mr-2 text-gray-600"></i>不间断电源 (UPS)</p>
+                 </div>
+            </div>
+        </section>
+
+    </div> <!-- End of main container -->
+    
+    <!-- ====================================================== -->
+    <!-- IV. 深色页脚 (Dark Footer) - 坚实收尾 -->
+    <!-- ====================================================== -->
+    <footer class="bg-brand-dark text-gray-300 py-16">
+        <div class="container mx-auto px-4 md:px-8 max-w-4xl text-center">
+            <h3 class="text-3xl font-bold text-white mb-4">深入了解 C2000™ 的卓越性能</h3>
+            <p class="text-lg leading-relaxed mb-8">
+                想了解更多使 C2000 MCU 成为您实时控制系统正确选择的功能吗？请查阅我们的技术文档与开发资源，开启您的下一个创新项目。
+            </p>
+            <a href="https://www.ti.com/c2000" target="_blank" class="inline-block bg-brand-highlight text-white font-bold font-english py-3 px-8 text-lg hover:bg-indigo-500 transition-colors duration-300">
+                访问 C2000 产品页面 <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
